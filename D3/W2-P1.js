@@ -259,16 +259,16 @@ for (let i2 = 0; i2 <= 15; i2++) {
   Scrivi un algoritmo che iteri i numeri da 1 a 100, stampandoli in console. Se un valore tuttavia è multiplo di 3, stampa al suo posto la parola "Fizz" e se il numero è multiplo di 5, stampa "Buzz". Se le condizioni si verificano entrambe, stampa "FizzBuzz".
 */
 
-for (let i3 = 0; i3 <= 100; i3++) {
-	if (i3 % 3 === 0) {
-	console.log("Fizz");
-	} else if (i3 % 5 === 0) {
-	console.log("Buzz");
-	} else if (i3 % 3 === 0 && i3 % 5 === 0) {
-	console.log("FizzBuzz")
-	} else {
-	console.log(i3)
-	}
+for (let i=0; i<=100; i++) {
+  if(i%15 == 0){
+    console.log('FizzBuzz');
+  } else if(i%5 == 0) {
+    console.log('Buzz');
+  }else if(i%3 == 0) {
+    console.log('Fizz');
+  } else if(i%5 != 0 && i%3 != 0 && i%15 != 0) {
+    console.log(i);
+  }
 }
 
 /* ESERCIZIO 18
