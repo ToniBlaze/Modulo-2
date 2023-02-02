@@ -208,6 +208,8 @@ isMale = true
 let gender = isMale ? "male" : "female"
 console.log(gender)
 
+
+
 /* ESERCIZIO 13
   Mostra i numeri da 0 a 5 (incluso) in ordine ascendente utilizzando un ciclo while.
 */
@@ -225,7 +227,7 @@ while (i <= 5) {
 */
 
 for (let i = 0; i <= 10; i++) {
-  console.log(i);;
+  console.log(i);
 } 
 
 
@@ -233,19 +235,41 @@ for (let i = 0; i <= 10; i++) {
   Mostra i numeri da 0 a 10 (incluso) in ordine ascendente, ma evitando di mostrare i numeri 3 e 8.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+for (let i = 0; i <= 10; i++) {
+  if (i === 3 || i === 8) {
+	continue;
+	}  console.log(i); 
+} 
+
 
 /* ESERCIZIO 16
   Scrivi un ciclo in JavaScript per iterare da 0 a 15. Per ciascun elemento, il ciclo deve controllare the il valore corrente sia pari o dispari, e mostrare il risultato in console.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+for (let i2 = 0; i2 <= 15; i2++) {
+	if (i2 % 2 === 0) {
+	console.log(i2, "il numero è PARI");
+	} else {
+	console.log(i2, "il numero è DISPARI");
+	} 
+}
+
 
 /* ESERCIZIO 17
   Scrivi un algoritmo che iteri i numeri da 1 a 100, stampandoli in console. Se un valore tuttavia è multiplo di 3, stampa al suo posto la parola "Fizz" e se il numero è multiplo di 5, stampa "Buzz". Se le condizioni si verificano entrambe, stampa "FizzBuzz".
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+for (let i3 = 0; i3 <= 100; i3++) {
+	if (i3 % 3 === 0) {
+	console.log("Fizz");
+	} else if (i3 % 5 === 0) {
+	console.log("Buzz");
+	} else if (i3 % 3 === 0 && i3 % 5 === 0) {
+	console.log("FizzBuzz")
+	} else {
+	console.log(i3)
+	}
+}
 
 /* ESERCIZIO 18
   Scrivi un algoritmo per controllare il giorno della settimana. Usa uno switch-case sulla variabile "day", che può avere un valore da 1 a 7.
