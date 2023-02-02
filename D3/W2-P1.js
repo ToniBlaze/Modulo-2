@@ -15,7 +15,7 @@ console.log ("y è maggiore di x")
 */ 
  
 if (y !== 5) {
-  console.log("not equal")
+  console.log("not equal") 
   } else {
   console.log("equal")
   }
