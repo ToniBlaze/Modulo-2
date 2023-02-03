@@ -276,4 +276,26 @@ for (let i=0; i<=100; i++) {
   Ad esempio, se il valore di "day" è 1, stampa in console "Lunedì"; se il valore fosse 3, in console dovrebbe comparire "Mercoledì".
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let day = 5
+switch (day) {
+  case 1:
+    console.log("Monday");
+    break;
+  case 2:
+     console.log("Tuesday");
+    break;
+  case 3:
+    console.log("Wednesday");
+    break;
+  case 4:
+    console.log("Thursday");
+    break;
+  case 5:
+    console.log("Friday");
+    break;
+  case 6:
+    console.log("Saturday");
+  case 7:
+    console.log("Sunday");
+    break;
+}
