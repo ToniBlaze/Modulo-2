@@ -45,7 +45,17 @@ console.log(randomArray)
   Scrivi del codice per ricavare solamente i valori PARI da un array composto da soli valori numerici.
  */
 
-let arr = [4, 61, 94, 11, 13, 146, 9, 34, 89, 46, 72, 7] 
+let arr = [4, 61, 94, 11, 13, 146, 9, 34, 89, 46, 72, 7];
+let evenNumber = [];
+
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i]%2 == 0) {
+    evenNumber.push(arr[i]);
+}
+}
+
+/* NON SO FARLO!!!! */
+
 
 
 /* ESERCIZIO 5
