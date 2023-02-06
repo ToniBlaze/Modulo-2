@@ -342,3 +342,11 @@ console.log(sum);
 /* ESERCIZIO 18
   Scrivi del codice per recuperare tutti i film dall'array fornito che contengono una parola fornita.
 */
+let word = "Lord";
+let results = [];
+
+for (let i = 0; i < movies.length; i++) {
+  if (movies[i].Title.includes(word)) {
+    results.push(movies[i])
+  }
+} console.log(results);
