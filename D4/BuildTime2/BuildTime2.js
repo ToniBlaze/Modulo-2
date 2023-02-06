@@ -29,5 +29,28 @@ const amy = {
   isAmbassador: false,
 }
 
-const prices = [34, 5, 2]
+// ALGORITMO
+const prices = [34, 45, 2]
 const shippingCost = 50
+
+let totalCart = 0;
+for (let i of prices) {
+  totalCart += i; 
+}
+console.log("Totale carrello: ", totalCart);
+
+
+// CARRELLO MAGGIORE DI 100?
+if (totalCart < 100) {
+  totalCart = totalCart + shippingCost;
+} 
+console.log("costo di spedizione: ", totalCart);
+
+if (marco.isAmbassador) {
+  totalCart = totalCart * 0.7;
+  console.log(marco.name, marco.lastName, "ha diritto al 30% di sconto. \n Nuovo totale: ", totalCart);
+  totalCart = totalCart + shippingCost;
+  console.log("Compreso di spedizione: ", totalCart);
+}
+
+/* rifallo tutto perche devi comprendere bene tutte le dinamiche, prova a farlo a modo tuo!! */ 
