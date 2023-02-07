@@ -11,6 +11,7 @@ In entrambi i casi, la spedizione è gratuita per ogni carrello con costo superi
 In basso troverai degli esempi di utenti, una lista prezzi e un costo fisso di spedizione.
 */
 
+
 const marco = {
   name: 'Marco',
   lastName: 'Rossi',
@@ -30,7 +31,7 @@ const amy = {
 }
 
 // ALGORITMO
-const prices = [34, 45, 2]
+const prices = [34, 65, 2]
 const shippingCost = 50
 
 let totalCart = 0;
@@ -39,18 +40,33 @@ for (let i of prices) {
 }
 console.log("Totale carrello: ", totalCart);
 
-
-// CARRELLO MAGGIORE DI 100?
-if (totalCart < 100) {
-  totalCart = totalCart + shippingCost;
-} 
-console.log("costo di spedizione: ", totalCart);
-
+    
 if (marco.isAmbassador) {
-  totalCart = totalCart * 0.7;
-  console.log(marco.name, marco.lastName, "ha diritto al 30% di sconto. \n Nuovo totale: ", totalCart);
-  totalCart = totalCart + shippingCost;
-  console.log("Compreso di spedizione: ", totalCart);
+  let totalCartMarco = totalCart * 0.7
+  console.log(marco.name, marco.lastName, "ha diritto al 30% di sconto. \n Nuovo totale: ", totalCartMarco);
+    if (totalCartMarco < 100) {
+      totalCartMarco = totalCartMarco + shippingCost;
+    }  console.log("Per Marco \n Carrello + spedizione: ", totalCartMarco);
 }
 
-/* rifallo tutto perche devi comprendere bene tutte le dinamiche, prova a farlo a modo tuo!! */ 
+if (paul.isAmbassador) {
+  let totalCartPaul = totalCart * 0.7
+  console.log(paul.name, paul.lastName, "ha diritto al 30% di sconto. \n Nuovo totale: ", totalCartPaul);
+} else { let totalCartPaul = totalCart;
+    console.log(paul.name, paul.lastName, "NON ha diritto allo sconto. \n Totale Carrello: ", totalCartPaul);
+    if (totalCartPaul < 100) {
+      totalCartPaul = totalCartPaul + shippingCost;
+    }  console.log("Per Paul \n Carrello + spedizione: ", totalCartPaul);
+}
+     
+if (amy.isAmbassador) {
+  let totalCartAmy = totalCart * 0.7
+  console.log(amy.name, amy.lastName, "ha diritto al 30% di sconto. \n Nuovo totale: ", totalCartAmy);
+} else { let totalCartAmy = totalCart;
+    console.log(amy.name, amy.lastName, "NON ha diritto allo sconto. \n Totale Carrello: ", totalCartAmy);
+    if (totalCartAmy < 100) {
+      totalCartAmy = totalCartAmy + shippingCost;
+    }  console.log("Per Amy  \n Carrello + spedizione: ", totalCartAmy);
+}
+     
+
