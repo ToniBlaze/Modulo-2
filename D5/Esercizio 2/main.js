@@ -43,6 +43,16 @@ let shoppingCart = [
     {id: 3, name: "product3", price: 5, quantity: 3}
 ]
 
+let sum = 0;
+
+function shoppingCartTotal(array) {
+  for (let i=0; i <array.length ;i++) {
+    let partial = array[i].price * array[i].quantity
+    sum += partial
+  }
+  return sum
+}
+console.log(shoppingCartTotal(shoppingCart));
 
 
 
@@ -53,21 +63,65 @@ let shoppingCart = [
  Crea una funzione chiamata "addToShoppingCart" che riceve un nuovo oggetto, lo aggiunge allo shoppingCart e ritorna il numero totale degli oggetti in esso contenuti.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let shoppingCart2 = [
+  {id: 1, name: "product1", price: 10, quantity: 2},
+  {id: 2, name: "product2", price: 20, quantity: 1},
+  {id: 3, name: "product3", price: 5, quantity: 3}
+]
+
+function addToShoppingCart(obj) {
+  shoppingCart2.push(obj) 
+  return shoppingCart2
+}
+
+let newObj =  {id: 4, name: "product4", price: 32, quantity: 4}
+
+addToShoppingCart(newObj)
+console.log(shoppingCart2, shoppingCart2.length);
+
+
 
 /* EXTRA 4
  Nel tuo sito e-commerce hai un array di oggetti chiamato shoppingCart. Ognuno di questi oggetti ha un prezzo, un nome, un id e la quantità da spedire.
  Crea una funzione chiamata "maxShoppingCart" che riceve l'array shoppingCart e ritorna l'oggetto più costoso in esso contenuto.
 */
+let shoppingCart3 = [
+  {id: 1, name: "product1", price: 10, quantity: 7},
+  {id: 2, name: "product2", price: 40, quantity: 1},
+  {id: 3, name: "product3", price: 5, quantity: 3}
+]
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function maxShoppingCart(arr) {
+  let higherPrice = arr[0];
+  for (i=0; i < arr.length; i++) {
+    if (arr[i].price > higherPrice.price) {
+      higherPrice = arr[i];
+    } 
+  }
+  return higherPrice;
+}
+
+console.log(maxShoppingCart(shoppingCart3));
+
 
 /* EXTRA 5
  Nel tuo sito e-commerce hai un array di oggetti chiamato shoppingCart. Ognuno di questi oggetti ha un prezzo, un nome, un id e la quantità da spedire.
  Crea una funzione chiamata "latestShoppingCart" che riceve l'array shoppingCart e ritorna l'ultimo oggetto in esso contenuto.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let shoppingCart4 = [
+  {id: 1, name: "product1", price: 10, quantity: 7},
+  {id: 2, name: "product2", price: 40, quantity: 1},
+  {id: 3, name: "product3", price: 5, quantity: 3}
+]
+
+function latestShoppingCart(arr) {
+  let lastItem = arr[arr.length - 1]
+  return lastItem
+}
+
+console.log(latestShoppingCart(shoppingCart4));
+
 
 /* EXTRA 6
  Crea una funzione chiamata "loopUntil" che riceve come parametro un intero "x" compreso tra 0 e 9.
