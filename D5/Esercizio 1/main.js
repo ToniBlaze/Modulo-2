@@ -132,19 +132,25 @@ console.log(upperFirst("ciao epicoderz, a domani!"));
  Scrivi una funzione chiamata "cutString", che accetta una stringa come parametro e la ritorna senza il primo e l'ultimo carattere.
 */
 
-// function cutString(str4) {
-//     let words2 = str4.split("");
-//     for(i=0; i<words2.length; i++){
-        
+function cutString(str) {
+    return str.substring(1, str.length - 1);
+}
 
-//     }
-//     return words.join("");
+console.log(cutString("Schenker"));
 
-// }
+
 
 
 /* ESERCIZIO 10
  Scrivi una funzione chiamata "giveMeRandom", che accetta come parametro un numero chiamato n e ritorna un array contenente n numeri random contenuti tra 0 e 10.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function giveMeRandom(n) {
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+      arr.push(Math.floor(Math.random() * 10));
+    }
+    return arr;
+  }
+
+  console.log(giveMeRandom(7));

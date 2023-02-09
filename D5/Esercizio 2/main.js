@@ -6,14 +6,47 @@
  La funzione deve infine tornare la somma di solamente i numeri che sono risultati maggiori di 5.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function giveMeRandom(n) {
+    let numbers = [];
+    for (let i = 0; i < n; i++) {
+      numbers.push(Math.floor(Math.random() * 10));
+    }
+    return numbers;
+  }
+  
+  function checkArray(numbers) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+      let isGreaterThanFive = numbers[i] > 5;
+      console.log(numbers[i] + " is greater than 5: " + isGreaterThanFive);
+      if (isGreaterThanFive) {
+        sum += numbers[i];
+      }
+    }
+    return sum;
+  }
+  
+  let randomNumbers = giveMeRandom(7);
+  let result = checkArray(randomNumbers);
+  console.log("The sum of numbers greater than 5 is: " + result);
+
+
 
 /* EXTRA 2
  Nel tuo sito e-commerce hai un array di oggetti chiamato shoppingCart. Ognuno di questi oggetti ha un prezzo, un nome, un id e la quantità da spedire.
  Crea una funzione chiamata "shoppingCartTotal" che calcola il totale dovuto al negozio.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let shoppingCart = [
+    {id: 1, name: "product1", price: 10, quantity: 2},
+    {id: 2, name: "product2", price: 20, quantity: 1},
+    {id: 3, name: "product3", price: 5, quantity: 3}
+]
+
+
+
+
+
 
 /* EXTRA 3
  Nel tuo sito e-commerce hai un array di oggetti chiamato shoppingCart. Ognuno di questi oggetti ha un prezzo, un nome, un id e la quantità da spedire.
