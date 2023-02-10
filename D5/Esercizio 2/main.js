@@ -128,27 +128,105 @@ console.log(latestShoppingCart(shoppingCart4));
  La funzione mostra in console un numero casuale tra 0 e 9 finchè il numero estratto è maggiore di x per 3 volte di fila.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+
+function loopUntil(x) {
+  let numbIsInt = x % 1 === 0;
+  if (numbIsInt && (x > 0 && x < 9)) {
+    let random = Math.floor(Math.random() * 9);
+    let random2 = Math.floor(Math.random() * 9);
+    let random3 = Math.floor(Math.random() * 9);
+    if (random > x && random2 > x && random3 > x) {
+      console.log(random);
+      console.log(random2);
+      console.log(random3);
+    }
+  } else if (x !== (x % 1 === 0) && x < 9) {
+    console.log("il numero non è intero");
+  } else if (x > 9){
+    console.log("non compreso tra 0 e 9");
+  }
+}
+console.log(loopUntil(2))
+
+// ALTRIMENTI
+
+// function loopUntil2(x) {
+//   let contatore = 0;
+//   while (contatore < 4) {
+//     let numRandom = Math.floor(Math.random()*(9-0));
+//     console.log(numRandom);
+//     if (numRandom > x) {
+//       contatore++;
+//     } else {
+//       contatore = 0;
+//     }
+//   }
+// }
+// console.log(loopUntil2(2))
 
 /* EXTRA 7
  Crea una funzione chiamata "average" che riceve un array come parametro e ritorna la media aritmetica dei numeri in esso contenuti.
  La funzione salta automaticamente qualsiasi valore non numerico all'interno dell'array.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let array2 = [5, 6, "Y", 13, "@", 10]
+
+function average(arr) {
+  let sum2 = 0;
+  let counter2 = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === 'number' && !isNaN(arr[i])) {
+      sum2 += arr[i];
+      counter2++;
+    }
+  }
+  return sum2 / counter2;
+}
+
+console.log(average(array2));
 
 /* EXTRA 8
  Scrivi una funzione chiamata "longest" che ricerca la stringa più lunga all'interno del parametro ricevuto (un array di stringhe).
 */
+let stringArray = [
+  "prima frase",
+  "seconda frase",
+  "frase piu lunga da riportare",
+  "ultima frase"
+]
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function longest(arr) {
+  let longestString = arr[0];
+  for (i=0; i < arr.length; i++) {
+    if (arr[i].length > longestString.length) {
+      longestString = arr[i];
+    } 
+  }
+  return longestString;
+}
+
+console.log(longest(stringArray));
+
+
 
 /* EXTRA 9
  Scrivi una funzione per creare un filtro anti spam molto semplice per una casella email. La funzione riceve una stringa come parametro, "emailContent", e ritorna un boolean.
  La funzione deve tornare true se emailContent NON contiene le parole "SPAM" o "SCAM".
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function antiSpam(emailContent) {
+  let check1 = "SPAM"
+  let check3 = "spam"
+  let check2 = "SCAM"
+  let check4 = "scam"
+  let isSpamOrScam = true;
+  if (emailContent.includes(check1 || check1)) {
+    isSpamOrScam = false;
+  } 
+  return isSpamOrScam
+}
+console.log(antiSpam("la mia email è pulita SPAM"));
+
 
 /* EXTRA 10
  Scrivi una funzione che riceve come parametro una data e ritorna il numero di giorni passati ad oggi.
