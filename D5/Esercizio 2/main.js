@@ -175,7 +175,7 @@ function average(arr) {
   let sum2 = 0;
   let counter2 = 0;
   for (let i = 0; i < arr.length; i++) {
-    if (typeof arr[i] === 'number' && !isNaN(arr[i])) {
+    if (typeof arr[i] === 'number') {
       sum2 += arr[i];
       counter2++;
     }
@@ -222,7 +222,7 @@ function antiSpam(emailContent) {
   let check2 = "SCAM"
   let check4 = "scam"
   let isSpamOrScam = true;
-  if (emailContent.includes(check1 || check1)) {
+  if (emailContent.includes(check1 || check2 || check3 || check4)) {
     isSpamOrScam = false;
   } 
   return isSpamOrScam
@@ -253,4 +253,13 @@ console.log(calcDate("2023-01-13"))
  "10","11","12"]
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function matrixGenerator(x, y) {
+  matrix = [];
+  for (i=0;i < x; i++) {
+      for (row=0 ; row < y; row++) {
+          matrix.push('' + i + row );
+      }
+  }
+  return matrix;
+}
+console.log(matrixGenerator(3, 4));

@@ -830,3 +830,37 @@ const jobs = [
     fraudulent: 0,
   },
 ]
+
+
+
+// SOLUZIONE // 
+
+// cercare all'interno dell'array tramite ciclo FOR 
+// cercare per "location" e per "position" contemporaneamente
+// inserire nel ARRAY --> "result: []" i risultati della ricerca 
+	// togli i campi: "requirements", "benefits", "company_profile"
+// inoltre crea variabile "count" che aumenta ad ogni intersezione trovata
+
+// RICORDA CHE LA RICERCA DEVE ESSERE CASE "INSENSITIVE", cioe non frega nulla di maiusc o minusc
+
+
+function jobsSearch(location, position) {
+  let result = [];
+  position = position.toLowerCase();
+  location = location.toLowerCase();
+
+  for (let i; i < jobs.length; i++) {
+    let jobLocation = jobs[i].location.toLowerCase();
+    let jobPosition = jobs[i].position.toLowerCase();
+
+    if (jobLocation) {
+      
+    }
+
+
+
+
+      
+    }
+  }
+}
