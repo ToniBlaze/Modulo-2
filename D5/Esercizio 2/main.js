@@ -185,6 +185,8 @@ function average(arr) {
 
 console.log(average(array2));
 
+
+
 /* EXTRA 8
  Scrivi una funzione chiamata "longest" che ricerca la stringa più lunga all'interno del parametro ricevuto (un array di stringhe).
 */
@@ -232,7 +234,16 @@ console.log(antiSpam("la mia email è pulita SPAM"));
  Scrivi una funzione che riceve come parametro una data e ritorna il numero di giorni passati ad oggi.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function calcDate(data) {
+  let today = new Date();
+  let dateSince = new Date(data)
+  let diff = today - dateSince
+  
+  return Math.floor(diff / (1000 * 60 * 60 * 24));
+}
+console.log(calcDate("2023-01-13"))
+
+
 
 /* EXTRA 11
  Scrivi una funzione chiamata "matrixGenerator" che riceve come parametri due interi, "x" e "y".
