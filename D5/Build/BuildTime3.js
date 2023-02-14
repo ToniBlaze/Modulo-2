@@ -831,8 +831,6 @@ const jobs = [
   },
 ]
 
-
-
 // SOLUZIONE // 
 
 // cercare all'interno dell'array tramite ciclo FOR 
@@ -849,18 +847,21 @@ function jobsSearch(location, position) {
   position = position.toLowerCase();
   location = location.toLowerCase();
 
-  for (let i; i < jobs.length; i++) {
+  for (let i = 0; i < jobs.length; i++) {
     let jobLocation = jobs[i].location.toLowerCase();
     let jobPosition = jobs[i].position.toLowerCase();
 
-    if (jobLocation) {
-      
-    }
-
-
-
-
-      
+    if (jobLocation == location && jobPosition == position) {
+      let newJobs = { 
+	  job_id: jobs[i].job_id,
+	  title: jobs[i].title,
+	  location: jobs[i].location,
+	  position: jobs[i].position
+	}
+	result.push(newJobs);  
     }
   }
+  return result
 }
+
+console.log(jobsSearch(US, dev))
