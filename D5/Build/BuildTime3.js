@@ -849,19 +849,19 @@ function jobsSearch(location, position) {
 
   for (let i = 0; i < jobs.length; i++) {
     let jobLocation = jobs[i].location.toLowerCase();
-    let jobPosition = jobs[i].position.toLowerCase();
+    let jobPosition = jobs[i].title.toLowerCase();
 
-    if (jobLocation == location && jobPosition == position) {
+    if (jobPosition.includes(position) && jobLocation.includes(location)) {
       let newJobs = { 
-	  job_id: jobs[i].job_id,
-	  title: jobs[i].title,
-	  location: jobs[i].location,
-	  position: jobs[i].position
-	}
-	result.push(newJobs);  
+        job_id: jobs[i].job_id,
+        title: jobs[i].title,
+        location: jobs[i].location,
+        position: jobs[i].title
+        }
+        result.push(newJobs);  
     }
   }
   return result
 }
 
-console.log(jobsSearch(US, dev))
+console.log(jobsSearch("us","dev"))
