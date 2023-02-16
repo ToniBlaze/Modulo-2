@@ -68,7 +68,7 @@ button {
     padding: 0.8% 2%;
 }
 
-#footer {
+#footer, #shopAddress {
     display: flex;
     justify-content: center;
     align-items: center;
