@@ -67,3 +67,10 @@ button {
     border: 1px solid grey;
     padding: 0.8% 2%;
 }
+
+#footer, #shopAddress {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
