@@ -191,10 +191,19 @@
        Aggiungi un event listener al campo di testo nella pagina e fai in modo che dopo ogni lettera il suo valore venga mostrato in console.
       */
 
-      const inputField = document.getElementById('input-field');
-      inputField.addEventListener('input', function(event) {
-        console.log(event.target.value);
-      })
+      // const inputField = document.getElementById('input-field');
+      // inputField.addEventListener('input', function(event) {
+      //   console.log(event.target.value);
+      // })
+
+      // ALTRIMENTI: 
+
+      const inputField = document.getElementById('input-field')
+      inputField.onkeyup = charKeyup;
+      function charKeyup(event) {
+        console.log(event.key);
+      }
+
 
 
       /* ESERCIZIO 12
