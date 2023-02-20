@@ -52,7 +52,7 @@ function changePriceColor(color) {
     const priceColor = document.querySelectorAll(".price")
 
     for (let i=0; i < priceColor.length; i++) {
-        priceColor[i].style.color = color
+        priceColor[i].style.color = color;    
     }
 }
 changePriceColor("red")
