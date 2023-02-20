@@ -125,6 +125,7 @@
       }
       addParagraph("Paragrafo aggiunto tramite JS - Esercizio 6")
 
+
       /* ESERCIZIO 7
        Scrivi una funzione per far scomparire la prima lista non-ordinata.
       */
@@ -151,32 +152,59 @@
        Rendi il tag h1 capace di cambiare colore del testo ogni volta che l'utente ci clicca sopra.
       */
 
+      // const makeItClickable = function () {
+      //   const title = document.querySelector("h1")
+      //   title.addEventListener("click", function() {
+      //     title.style.color = "green"
+      //   })
+      // }
+      // makeItClickable()
+
+      // ALTRIMENTI: 
+      
       const makeItClickable = function () {
-        //
+        const title = document.querySelector("h1")
+        let colorIndex = 0
+        const colors = ["green", "red", "blue", "pink", "yellow"]
+
+        title.addEventListener("click", function() {
+          title.style.color = colors[colorIndex]
+          colorIndex = (colorIndex + 1) % colors.length
+        })
       }
+      makeItClickable()
+
 
       /* ESERCIZIO 10
        Cambia il testo del footer con qualcos'altro quando l'utente ci clicca sopra.
       */
 
       const changeFooterText = function () {
-        //
+        const footerText = document.getElementsByTagName("div")[4]
+        footerText.addEventListener("click", function() {
+          footerText.innerHTML = "Non sapevo cosa scrivere quindi ciao a tutti!!!!"          
+        })
       }
+      changeFooterText()
 
       /* ESERCIZIO 11
        Aggiungi un event listener al campo di testo nella pagina e fai in modo che dopo ogni lettera il suo valore venga mostrato in console.
       */
 
-      const inputField = document.getElementById('input-field')
-      // ...
+      const inputField = document.getElementById('input-field');
+      inputField.addEventListener('input', function(event) {
+        console.log(event.target.value);
+      })
+
 
       /* ESERCIZIO 12
        Crea un messaggio di benvenuto con un alert quando la pagina ha finito di caricarsi.
       */
 
       window.onload = function () {
-        //
+        window.alert("La pagina ha finito di caricarsi!")
       }
+
 
       /* ESERCIZIO 13
        Utilizza tag HTML5 per assegnare il corretto contenuto semantico alle differenti sezioni della pagina.
