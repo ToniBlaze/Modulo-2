@@ -1,8 +1,48 @@
+
 body {
     width: 100%;
     height: 100vh;
-    margin: 0 auto;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
+  
+  h1 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  a {
+    color: darkviolet;
+  }
+  
+  table, td {
+    border: solid black 1px;
+    border-radius: 8px;
+  }
+  
+  .borderclass {
+    border: solid black 3px;
+  }
+  
+  p {
+    margin: 10px;
+  }
+  
+  .changeFont {
+    font-size: 25px;
+    font-weight: 700;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  td {
+    border: 1px solid green;
+  }
+  
+  tr > td, tr th {
+    border: 2px dotted red;
+  }
