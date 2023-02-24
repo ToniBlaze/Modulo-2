@@ -16,6 +16,11 @@ body {
   a {
     color: darkviolet;
   }
+
+  a img {
+    height: 100px;
+    width: 100px;
+  }
   
   table, td {
     border: solid black 1px;
