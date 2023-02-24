@@ -106,3 +106,54 @@ function higherSumArray(first, second) {
 }
 
 higherSumArray(array1, array2)
+
+
+////////////////////////////////////////////////////
+
+// ESERCIZI SUL DOM
+
+// 31) Seleziona l'elemento con id "container" nella pagina
+
+const myElement = document.getElementById("container")
+
+// 32) Seleziona tutti gli elementi di tipo <td> nella pagina
+
+const myElement1 = document.getElementsByTagName("td")
+
+// 33) Usa un ciclo per stampare in console il testo contenuto in ogni elemento <td> nella pagina
+
+for (let i of myElement1) {
+    console.log(i.innerHTML)
+}
+
+
+// 34) Scrivi una funzione per cambiare il titolo della pagina
+
+document.querySelector("h1").innerHTML = "Nuovo titolo"
+
+// 35) Scrivi una funzione per aggiungere una nuova riga alla tabella nella pagina
+
+function addNewRow() {
+    let table = document.querySelector('table');
+    let newRow = document.createElement('tr');
+
+    let cell1 = document.createElement('td');
+    cell1.textContent = 'cella vuota 1';
+    let cell2 = document.createElement('td');
+    cell2.textContent = 'cella vuota 2';
+
+    newRow.appendChild(cell1);
+    newRow.appendChild(cell2);
+
+    table.appendChild(newRow);
+}
+
+addNewRow()
+
+
+
+// 36) Scrivi una funzione per aggiungere la classe "test" ad ogni riga nella tabella
+// 37) Scrivi una funzione per aggiungere uno sfondo rosso a ogni link presente nella pagina
+// 38) Mostra in console "Page loaded" quando la pagina ha finito di caricarsi
+// 39) Scrivi una funzione per aggiungere nuovi elementi alla lista non ordinata nella pagina
+// 40) Scrivi una funzione per svuotare una lista nella pagina
