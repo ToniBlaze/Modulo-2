@@ -153,7 +153,47 @@ addNewRow()
 
 
 // 36) Scrivi una funzione per aggiungere la classe "test" ad ogni riga nella tabella
+
+function addClassToRows() {
+    let rows = document.getElementsByTagName("tr");
+    for (let i = 0; i < rows.length; i++) {
+      rows[i].classList.add("test");
+    }
+}
+addClassToRows()
+  
+
+
 // 37) Scrivi una funzione per aggiungere uno sfondo rosso a ogni link presente nella pagina
+function addClassToLink() {
+    let links = document.querySelectorAll("a");
+    for (let i = 0; i < links.length; i++) {
+      links[i].style.backgroundColor = "red"
+    }
+}
+addClassToLink()
+
+
 // 38) Mostra in console "Page loaded" quando la pagina ha finito di caricarsi
+
+window.onload = function() {
+    console.log("Page loaded");
+  }
+  
+
+
 // 39) Scrivi una funzione per aggiungere nuovi elementi alla lista non ordinata nella pagina
+function addNewLiElement(content) {
+    const ul = document.querySelector("ul")
+    const newLi = document.createElement("li")
+    newLi.innerHTML = content
+
+    ul.appendChild(newLi)
+}
+
+addNewLiElement("Elemento aggiunto con JS - ES 39")
+
+
+
+
 // 40) Scrivi una funzione per svuotare una lista nella pagina
