@@ -197,3 +197,23 @@ addNewLiElement("Elemento aggiunto con JS - ES 39")
 
 
 // 40) Scrivi una funzione per svuotare una lista nella pagina
+
+function clearList() {
+    const ul = document.querySelector("ul");
+    ul.innerHTML = "";
+}
+clearList()
+  
+
+// ESERCIZI EXTRA
+
+// 41) Aggiungi un event listener in modo che compaia un alert quando il cursore passa sopra un link; l'alert deve mostrare la sua proprietà href
+// 42) Crea un bottone che una volta cliccato nasconde ogni immagine nella pagina
+// 43) Crea un bottone che una volta cliccato nasconde o mostra la tabella nella pagina
+// 44) Crea una funzione per calcolare la somma di ogni numero contenuto in tutte le celle della tabella (se il contenuto è un numero)
+// 45) Cancella l'ultima lettera dal titolo della pagina ogni volta che l'utente ci clicca sopra
+// 46) Aggiungi un event listener in modo che cliccando un <td> nella pagina, questo cambi colore di sfondo
+// 47) Aggiungi un bottone che una volta cliccato elimini un <td> a caso nella tabella
+// 48) Aggiungi automaticamente un bordo rosa ad una cella della tabella quando il cursore ci passa sopra
+// 49) Scrivi una funzione per creare una tabella con 4 righe e 3 colonne e aggiungerla alla fine della pagina
+// 50) Scrivi una funzione per rimuovere l'ultima tabella presente nella pagina
