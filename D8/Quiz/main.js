@@ -101,27 +101,102 @@ const questions = [
 let userScore = 0
 
 function confermaPrimaRisposta() {
-    let primaRisposta = document.querySelector("#first-answer")
-    let secondaRisposta = document.querySelector("#second-answer")
-    let terzaRisposta = document.querySelector("#third-answer")
-    let quartaRisposta = document.querySelector("#four-answer")
 
-    let userAnswer = ""
-    if (primaRisposta.checked) {
-        userAnswer = primaRisposta.value 
-    } else if (secondaRisposta.checked) {
-        userAnswer = secondaRisposta.value 
-    } else if (terzaRisposta.checked) {
-        userAnswer = terzaRisposta.value 
-    } else if (quartaRisposta.checked) {
-        userAnswer = quartaRisposta.value 
-    }
+  let primaRisposta = document.querySelector("#first-answer")
+  let secondaRisposta = document.querySelector("#second-answer")
+  let terzaRisposta = document.querySelector("#third-answer")
+  let quartaRisposta = document.querySelector("#four-answer")
 
-    let correctAnswer = questions[0].correct_answer.toLowerCase().replaceAll(" ","-")
-    
+  let userAnswer = ""
+  if (primaRisposta.checked) {
+      userAnswer = primaRisposta.value 
+  } else if (secondaRisposta.checked) {
+      userAnswer = secondaRisposta.value 
+  } else if (terzaRisposta.checked) {
+      userAnswer = terzaRisposta.value 
+  } else if (quartaRisposta.checked) {
+      userAnswer = quartaRisposta.value 
+  }
 
-    if (userAnswer === correctAnswer) {
-        userScore += 1
-    }
+  let correctAnswer = questions[0].correct_answer.toLowerCase().replaceAll(" ","-")
+  
 
+  if (userAnswer === correctAnswer) {
+    userScore += 1
+    document.getElementById("firstButton").disabled = true;
+    alert("Risposta Corretta!")
+  } else {
+    document.getElementById("firstButton").disabled = true;
+    alert("Risposta Sbagliata!")
+  }
+  console.log("1/10 Domande - Punteggio: ",userScore)
 }
+
+
+function confermaSecondaRisposta() {
+
+  let primaRisposta = document.querySelector("#first-answer2")
+  let secondaRisposta = document.querySelector("#second-answer2")
+  let terzaRisposta = document.querySelector("#third-answer2")
+  let quartaRisposta = document.querySelector("#four-answer2")
+
+  let userAnswer = ""
+  if (primaRisposta.checked) {
+      userAnswer = primaRisposta.value 
+  } else if (secondaRisposta.checked) {
+      userAnswer = secondaRisposta.value 
+  } else if (terzaRisposta.checked) {
+      userAnswer = terzaRisposta.value 
+  } else if (quartaRisposta.checked) {
+      userAnswer = quartaRisposta.value 
+  }
+
+  let correctAnswer = questions[1].correct_answer.toLowerCase()
+  
+
+  if (userAnswer === correctAnswer) {
+    userScore += 1
+    document.getElementById("secondButton").disabled = true;
+    alert("Risposta Corretta!")
+  } else {
+    document.getElementById("secondButton").disabled = true;
+    alert("Risposta Sbagliata!")
+  }
+  console.log("2/10 Domande - Punteggio: ",userScore)
+}
+
+function confermaTerzaRisposta() {
+
+  let primaRisposta = document.querySelector("#first-answer3")
+  let secondaRisposta = document.querySelector("#second-answer3")
+
+  let userAnswer = ""
+  if (primaRisposta.checked) {
+      userAnswer = primaRisposta.value 
+  } else if (secondaRisposta.checked) {
+      userAnswer = secondaRisposta.value 
+  } 
+
+  let correctAnswer = questions[2].correct_answer.toLowerCase().replaceAll(" ","-")
+  
+
+  if (userAnswer === correctAnswer) {
+    userScore += 1
+    document.getElementById("thirdButton").disabled = true;
+    alert("Risposta Corretta!")
+  } else {
+    document.getElementById("thirdButton").disabled = true;
+    alert("Risposta Sbagliata!")
+  }
+  console.log("3/10 Domande - Punteggio: ",userScore)
+}
+
+
+// - Copiare ed incollare tutte le domande e tutte le relative funzioni (COPIA SEMPRE LA PRIMA DOMANDA SIA PER "DOMANDA E RISP" CHE PER "FUNZIONI" --> POI MODIFICA DI CONSEGUENZA)
+// - Ovviamente sostituire le parti necessarie (domande, risposte, ID, classi, nomi funzioni ecc ecc)
+// - Arrivato all'ultima domanda, aggiungi il seguente codice per fare sparire tutte le domande:
+//  let removeBox = document.getElementById("quizBox")
+//  removeBox.style.display = "none"
+
+//  - Al suo posto metti delle frasi di congratulazioni e dire se l'utente è promosso oppure no! (oltre a mostrare il suo punteggio!)
+
