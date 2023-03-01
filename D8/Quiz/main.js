@@ -234,15 +234,221 @@ function confermaQuartaRisposta() {
   removeAnswer.style.display = "none";
 }
 
+function confermaQuintaRisposta() {
 
+  let primaRisposta = document.querySelector("#first-answer5")
+  let secondaRisposta = document.querySelector("#second-answer5")
+  let terzaRisposta = document.querySelector("#third-answer5")
+  let quartaRisposta = document.querySelector("#four-answer5")
 
+  let userAnswer = ""
 
+  if (primaRisposta.checked) {
+    userAnswer = primaRisposta.value 
+  } else if (secondaRisposta.checked) {
+    userAnswer = secondaRisposta.value 
+  } else if (terzaRisposta.checked) {
+    userAnswer = terzaRisposta.value 
+  } else if (quartaRisposta.checked) {
+    userAnswer = quartaRisposta.value 
+  } else {
+    alert("Seleziona una risposta")
+    return
+  }
 
-// - Copiare ed incollare tutte le domande e tutte le relative funzioni (COPIA SEMPRE LA PRIMA DOMANDA SIA PER "DOMANDA E RISP" CHE PER "FUNZIONI" --> POI MODIFICA DI CONSEGUENZA)
-// - Ovviamente sostituire le parti necessarie (domande, risposte, ID, classi, nomi funzioni ecc ecc)
-// - Arrivato all'ultima domanda, aggiungi il seguente codice per fare sparire tutte le domande:
-//  let removeBox = document.getElementById("quizBox")
-//  removeBox.style.display = "none"
+  let correctAnswer = questions[4].correct_answer.toLowerCase().replaceAll(" ","-")
+  
+  if (userAnswer === correctAnswer) {
+    userScore += 1
+    alert("Risposta Corretta!")
+  } else {
+    alert("Risposta Sbagliata!")
+  }
+
+  console.log("5/10 Domande - Punteggio: ",userScore);
+  const removeAnswer = document.getElementById("container-five");
+  removeAnswer.style.display = "none";
+}
+
+function confermaSestaRisposta() {
+
+  let primaRisposta = document.querySelector("#first-answer6")
+  let secondaRisposta = document.querySelector("#second-answer6")
+  let terzaRisposta = document.querySelector("#third-answer6")
+  let quartaRisposta = document.querySelector("#four-answer6")
+
+  let userAnswer = ""
+
+  if (primaRisposta.checked) {
+    userAnswer = primaRisposta.value 
+  } else if (secondaRisposta.checked) {
+    userAnswer = secondaRisposta.value 
+  } else if (terzaRisposta.checked) {
+    userAnswer = terzaRisposta.value 
+  } else if (quartaRisposta.checked) {
+    userAnswer = quartaRisposta.value 
+  } else {
+    alert("Seleziona una risposta")
+    return
+  }
+
+  let correctAnswer = questions[5].correct_answer.toLowerCase().replaceAll(" ","-")
+  
+  if (userAnswer === correctAnswer) {
+    userScore += 1
+    alert("Risposta Corretta!")
+  } else {
+    alert("Risposta Sbagliata!")
+  }
+
+  console.log("6/10 Domande - Punteggio: ",userScore);
+  const removeAnswer = document.getElementById("container-six");
+  removeAnswer.style.display = "none";
+}
+
+function confermaSettimaRisposta() {
+
+  let primaRisposta = document.querySelector("#first-answer7")
+  let secondaRisposta = document.querySelector("#second-answer7")
+  let terzaRisposta = document.querySelector("#third-answer7")
+  let quartaRisposta = document.querySelector("#four-answer7")
+
+  let userAnswer = ""
+
+  if (primaRisposta.checked) {
+    userAnswer = primaRisposta.value 
+  } else if (secondaRisposta.checked) {
+    userAnswer = secondaRisposta.value 
+  } else if (terzaRisposta.checked) {
+    userAnswer = terzaRisposta.value 
+  } else if (quartaRisposta.checked) {
+    userAnswer = quartaRisposta.value 
+  } else {
+    alert("Seleziona una risposta")
+    return
+  }
+
+  let correctAnswer = questions[6].correct_answer.toLowerCase().replaceAll(" ","-")
+  
+  if (userAnswer === correctAnswer) {
+    userScore += 1
+    alert("Risposta Corretta!")
+  } else {
+    alert("Risposta Sbagliata!")
+  }
+
+  console.log("7/10 Domande - Punteggio: ",userScore);
+  const removeAnswer = document.getElementById("container-seven");
+  removeAnswer.style.display = "none";
+}
+
+function confermaOttavaRisposta() {
+
+  let primaRisposta = document.querySelector("#first-answer8")
+  let secondaRisposta = document.querySelector("#second-answer8")
+  let terzaRisposta = document.querySelector("#third-answer8")
+  let quartaRisposta = document.querySelector("#four-answer8")
+
+  let userAnswer = ""
+
+  if (primaRisposta.checked) {
+    userAnswer = primaRisposta.value 
+  } else if (secondaRisposta.checked) {
+    userAnswer = secondaRisposta.value 
+  } else if (terzaRisposta.checked) {
+    userAnswer = terzaRisposta.value 
+  } else if (quartaRisposta.checked) {
+    userAnswer = quartaRisposta.value 
+  } else {
+    alert("Seleziona una risposta")
+    return
+  }
+
+  let correctAnswer = questions[7].correct_answer.toLowerCase().replaceAll(" ","-")
+  
+  if (userAnswer === correctAnswer) {
+    userScore += 1
+    alert("Risposta Corretta!")
+  } else {
+    alert("Risposta Sbagliata!")
+  }
+
+  console.log("8/10 Domande - Punteggio: ",userScore);
+  const removeAnswer = document.getElementById("container-eight");
+  removeAnswer.style.display = "none";
+}
+
+function confermaNonaRisposta() {
+
+  let primaRisposta = document.querySelector("#first-answer9")
+  let secondaRisposta = document.querySelector("#second-answer9")
+
+  let userAnswer = ""
+
+  if (primaRisposta.checked) {
+    userAnswer = primaRisposta.value 
+  } else if (secondaRisposta.checked) {
+    userAnswer = secondaRisposta.value 
+  } else {
+    alert("Seleziona una risposta")
+    return
+  }
+
+  let correctAnswer = questions[8].correct_answer.toLowerCase().replaceAll(" ","-")
+  
+  if (userAnswer === correctAnswer) {
+    userScore += 1
+    alert("Risposta Corretta!")
+  } else {
+    alert("Risposta Sbagliata!")
+  }
+
+  console.log("9/10 Domande - Punteggio: ",userScore);
+  const removeAnswer = document.getElementById("container-nine");
+  removeAnswer.style.display = "none";
+}
+
+function confermaDecimaRisposta() {
+
+  let primaRisposta = document.querySelector("#first-answer10")
+  let secondaRisposta = document.querySelector("#second-answer10")
+  let terzaRisposta = document.querySelector("#third-answer10")
+  let quartaRisposta = document.querySelector("#four-answer10")
+
+  let userAnswer = ""
+
+  if (primaRisposta.checked) {
+    userAnswer = primaRisposta.value 
+  } else if (secondaRisposta.checked) {
+    userAnswer = secondaRisposta.value 
+  } else if (terzaRisposta.checked) {
+    userAnswer = terzaRisposta.value 
+  } else if (quartaRisposta.checked) {
+    userAnswer = quartaRisposta.value 
+  } else {
+    alert("Seleziona una risposta")
+    return
+  }
+
+  let correctAnswer = questions[9].correct_answer.toLowerCase().replaceAll(" ","-")
+  
+  if (userAnswer === correctAnswer) {
+    userScore += 1
+    alert("Risposta Corretta!")
+  } else {
+    alert("Risposta Sbagliata!")
+  }
+
+  console.log("10/10 Domande - Punteggio: ",userScore);
+  const removeAnswer = document.getElementById("container-ten");
+  removeAnswer.style.display = "none";
+
+  alert("Hai finito le domande! \nVuoi scoprire il tuo punteggio?")
+
+  // AGGIUNGERE IL CODICE PER FARE USCIRE CONTENIORE DOVE MOSTRA IL PUNTEGGIO DELL'UTENTE E SE E' PROMOSSO! 
+
+}
+
 
 //  - Al suo posto metti delle frasi di congratulazioni e dire se l'utente è promosso oppure no! (oltre a mostrare il suo punteggio!)
 
