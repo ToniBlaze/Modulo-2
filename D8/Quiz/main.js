@@ -108,30 +108,33 @@ function confermaPrimaRisposta() {
   let quartaRisposta = document.querySelector("#four-answer")
 
   let userAnswer = ""
+
   if (primaRisposta.checked) {
-      userAnswer = primaRisposta.value 
+    userAnswer = primaRisposta.value 
   } else if (secondaRisposta.checked) {
-      userAnswer = secondaRisposta.value 
+    userAnswer = secondaRisposta.value 
   } else if (terzaRisposta.checked) {
-      userAnswer = terzaRisposta.value 
+    userAnswer = terzaRisposta.value 
   } else if (quartaRisposta.checked) {
-      userAnswer = quartaRisposta.value 
+    userAnswer = quartaRisposta.value 
+  } else {
+    alert("Seleziona una risposta")
+    return
   }
 
   let correctAnswer = questions[0].correct_answer.toLowerCase().replaceAll(" ","-")
   
-
   if (userAnswer === correctAnswer) {
     userScore += 1
-    document.getElementById("firstButton").disabled = true;
     alert("Risposta Corretta!")
   } else {
-    document.getElementById("firstButton").disabled = true;
     alert("Risposta Sbagliata!")
   }
-  console.log("1/10 Domande - Punteggio: ",userScore)
-}
 
+  console.log("1/10 Domande - Punteggio: ",userScore);
+  const removeAnswer = document.getElementById("container-one");
+  removeAnswer.style.display = "none";
+}
 
 function confermaSecondaRisposta() {
 
@@ -141,55 +144,98 @@ function confermaSecondaRisposta() {
   let quartaRisposta = document.querySelector("#four-answer2")
 
   let userAnswer = ""
+
   if (primaRisposta.checked) {
-      userAnswer = primaRisposta.value 
+    userAnswer = primaRisposta.value 
   } else if (secondaRisposta.checked) {
-      userAnswer = secondaRisposta.value 
+    userAnswer = secondaRisposta.value 
   } else if (terzaRisposta.checked) {
-      userAnswer = terzaRisposta.value 
+    userAnswer = terzaRisposta.value 
   } else if (quartaRisposta.checked) {
-      userAnswer = quartaRisposta.value 
+    userAnswer = quartaRisposta.value 
+  } else {
+    alert("Seleziona una risposta")
+    return
   }
 
-  let correctAnswer = questions[1].correct_answer.toLowerCase()
+  let correctAnswer = questions[1].correct_answer.toLowerCase().replaceAll(" ","-")
   
-
   if (userAnswer === correctAnswer) {
     userScore += 1
-    document.getElementById("secondButton").disabled = true;
     alert("Risposta Corretta!")
   } else {
-    document.getElementById("secondButton").disabled = true;
     alert("Risposta Sbagliata!")
   }
-  console.log("2/10 Domande - Punteggio: ",userScore)
+
+  console.log("2/10 Domande - Punteggio: ",userScore);
+  const removeAnswer = document.getElementById("container-two");
+  removeAnswer.style.display = "none";
 }
 
 function confermaTerzaRisposta() {
 
   let primaRisposta = document.querySelector("#first-answer3")
   let secondaRisposta = document.querySelector("#second-answer3")
+  let terzaRisposta = document.querySelector("#third-answer3")
+  let quartaRisposta = document.querySelector("#four-answer3")
 
   let userAnswer = ""
+
   if (primaRisposta.checked) {
-      userAnswer = primaRisposta.value 
+    userAnswer = primaRisposta.value 
   } else if (secondaRisposta.checked) {
-      userAnswer = secondaRisposta.value 
-  } 
+    userAnswer = secondaRisposta.value 
+  } else {
+    alert("Seleziona una risposta")
+    return
+  }
 
   let correctAnswer = questions[2].correct_answer.toLowerCase().replaceAll(" ","-")
   
-
   if (userAnswer === correctAnswer) {
     userScore += 1
-    document.getElementById("thirdButton").disabled = true;
     alert("Risposta Corretta!")
   } else {
-    document.getElementById("thirdButton").disabled = true;
     alert("Risposta Sbagliata!")
   }
-  console.log("3/10 Domande - Punteggio: ",userScore)
+
+  console.log("3/10 Domande - Punteggio: ",userScore);
+  const removeAnswer = document.getElementById("container-three");
+  removeAnswer.style.display = "none";
 }
+
+function confermaQuartaRisposta() {
+
+  let primaRisposta = document.querySelector("#first-answer4")
+  let secondaRisposta = document.querySelector("#second-answer4")
+
+  let userAnswer = ""
+
+  if (primaRisposta.checked) {
+    userAnswer = primaRisposta.value 
+  } else if (secondaRisposta.checked) {
+    userAnswer = secondaRisposta.value 
+  } else {
+    alert("Seleziona una risposta")
+    return
+  }
+
+  let correctAnswer = questions[3].correct_answer.toLowerCase().replaceAll(" ","-")
+  
+  if (userAnswer === correctAnswer) {
+    userScore += 1
+    alert("Risposta Corretta!")
+  } else {
+    alert("Risposta Sbagliata!")
+  }
+
+  console.log("4/10 Domande - Punteggio: ",userScore);
+  const removeAnswer = document.getElementById("container-four");
+  removeAnswer.style.display = "none";
+}
+
+
+
 
 
 // - Copiare ed incollare tutte le domande e tutte le relative funzioni (COPIA SEMPRE LA PRIMA DOMANDA SIA PER "DOMANDA E RISP" CHE PER "FUNZIONI" --> POI MODIFICA DI CONSEGUENZA)
