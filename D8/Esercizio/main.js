@@ -208,6 +208,17 @@ clearList()
 // ESERCIZI EXTRA
 
 // 41) Aggiungi un event listener in modo che compaia un alert quando il cursore passa sopra un link; l'alert deve mostrare la sua proprietà href
+
+const link = document.querySelectorAll("a");
+
+for (const i of link) {
+    i.addEventListener("mouseover", function() {
+        alert(i.href);
+    });
+}
+
+
+
 // 42) Crea un bottone che una volta cliccato nasconde ogni immagine nella pagina
 // 43) Crea un bottone che una volta cliccato nasconde o mostra la tabella nella pagina
 // 44) Crea una funzione per calcolare la somma di ogni numero contenuto in tutte le celle della tabella (se il contenuto è un numero)
