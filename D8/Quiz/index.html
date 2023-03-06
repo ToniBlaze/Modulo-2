@@ -8,153 +8,160 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section id="quizBox">
+    <main>
+        <section id="quiz-box">
 
-        <!-- PRIMA DOMANDA -->
-        <div id="container-one">
-            <div class="questionBox">
-                <h1 class="question">1- What does CPU stand for?</h1>
+            <!-- PRIMA DOMANDA -->
+            <div id="container-one">
+                <div class="questionBox">
+                    <h1 class="question">1- What does CPU stand for?</h1>
+                </div>
+
+                <div class="answerBox">
+                    <input id="first-answer" type="radio" value="central-process-unit"><span>Central Process Unit</span> 
+                    <input id="second-answer" type="radio" value="central-personal-unit"><span>Computer Personal Unit</span>
+                    <input id="third-answer" type="radio" value="central-processor-unit"><span>Central Processor Unit</span>
+                    <input id="four-answer" type="radio" value="central-processing-unit"><span>Central Processing Unit</span>
+                </div>
+                <button onclick="confermaPrimaRisposta()">Conferma</button>
             </div>
 
-            <div class="answerBox">
-                <input id="first-answer" type="radio" value="central-process-unit"><span>Central Process Unit</span> 
-                <input id="second-answer" type="radio" value="central-personal-unit"><span>Computer Personal Unit</span>
-                <input id="third-answer" type="radio" value="central-processor-unit"><span>Central Processor Unit</span>
-                <input id="four-answer" type="radio" value="central-processing-unit"><span>Central Processing Unit</span>
+            <!-- SECONDA DOMANDA -->
+            <div id="container-two">
+                <div class="questionBox">
+                    <h1 class="question">2- In the programming language Java, which of these keywords would you put on a variable to make sure it doesn't get modified?</h1>
+                </div>
+
+                <div class="answerBox">
+                    <input id="first-answer2" type="radio" value="final"><span>Final</span> 
+                    <input id="second-answer2" type="radio" value="private"><span>Private</span>
+                    <input id="third-answer2" type="radio" value="static"><span>Static</span>
+                    <input id="four-answer2" type="radio" value="public"><span>Public</span>
+                </div>
+                <button onclick="confermaSecondaRisposta()">Conferma</button>
             </div>
-            <button onclick="confermaPrimaRisposta()">Conferma</button>
+
+            <!-- TERZA DOMANDA -->
+            <div id="container-three">
+                <div class="questionBox">
+                    <h1 class="question">3- The logo for Snapchat is a Bell.</h1>
+                </div>
+
+                <div class="answerBox">
+                    <input id="first-answer3" type="radio" value="true"><span>True</span> 
+                    <input id="second-answer3" type="radio" value="false"><span>False</span>
+                </div>
+                <button onclick="confermaTerzaRisposta()">Conferma</button>
+            </div>
+
+            <!-- QUARTA DOMANDA -->
+            <div id="container-four">
+                <div class="questionBox">
+                    <h1 class="question">4- Pointers were not used in the original C programming language; they were added later on in C++.</h1>
+                </div>
+
+                <div class="answerBox">
+                    <input id="first-answer4" type="radio" value="false"><span>False</span> 
+                    <input id="second-answer4" type="radio" value="true"><span>True</span>
+                </div>
+                <button onclick="confermaQuartaRisposta()">Conferma</button>
+            </div>
+
+            <!-- QUINTA DOMANDA -->
+            <div id="container-five">
+                <div class="questionBox">
+                    <h1 class="question">5- What is the most preferred image format used for logos in the Wikimedia database?</h1>
+                </div>
+
+                <div class="answerBox">
+                    <input id="first-answer5" type="radio" value=".gif"><span>.gif</span> 
+                    <input id="second-answer5" type="radio" value=".svg"><span>.svg</span>
+                    <input id="third-answer5" type="radio" value=".png"><span>.png</span>
+                    <input id="four-answer5" type="radio" value=".jpeg"><span>.jpeg</span>
+                </div>
+                <button onclick="confermaQuintaRisposta()">Conferma</button>
+            </div>
+            
+            <!-- SESTA DOMANDA -->
+            <div id="container-six">
+                <div class="questionBox">
+                    <h1 class="question">6- In web design, what does CSS stand for?</h1>
+                </div>
+
+                <div class="answerBox">
+                    <input id="first-answer6" type="radio" value="counter-strike:-source"><span>Counter Strike: Source</span> 
+                    <input id="second-answer6" type="radio" value="corrective-style-sheet"><span>Corrective Style Sheet</span>
+                    <input id="third-answer6" type="radio" value="cascading-style-sheet"><span>Cascading Style Sheet</span>
+                    <input id="four-answer6" type="radio" value="computer-style-sheet"><span>Computer Style Sheet</span>
+                </div>
+                <button onclick="confermaSestaRisposta()">Conferma</button>
+            </div>
+
+            <!-- SETTIMA DOMANDA -->
+            <div id="container-seven">
+                <div class="questionBox">
+                    <h1 class="question">7- What is the code name for the mobile operating system Android 7.0?</h1>
+                </div>
+
+                <div class="answerBox">
+                    <input id="first-answer7" type="radio" value="ice-cream-sandwich"><span>Ice Cream Sandwich</span> 
+                    <input id="second-answer7" type="radio" value="marshmallow"><span>Marshmallow</span>
+                    <input id="third-answer7" type="radio" value="jelly-bean"><span>Jelly Bean</span>
+                    <input id="four-answer7" type="radio" value="nougat"><span>Nougat</span>
+                </div>
+                <button onclick="confermaSettimaRisposta()">Conferma</button>
+            </div>
+
+            <!-- OTTAVA DOMANDA -->
+            <div id="container-eight">
+                <div class="questionBox">
+                    <h1 class="question">8- On Twitter, what is the character limit for a Tweet?</h1>
+                </div>
+
+                <div class="answerBox">
+                    <input id="first-answer8" type="radio" value=140><span>140</span> 
+                    <input id="second-answer8" type="radio" value=120><span>120</span>
+                    <input id="third-answer8" type="radio" value=160><span>160</span>
+                    <input id="four-answer8" type="radio" value=100><span>100</span>
+                </div>
+                <button onclick="confermaOttavaRisposta()">Conferma</button>
+            </div>
+
+            <!-- NONA DOMANDA -->
+            <div id="container-nine">
+                <div class="questionBox">
+                    <h1 class="question">9- Linux was first created as an alternative to Windows XP.</h1>
+                </div>
+
+                <div class="answerBox">
+                    <input id="first-answer9" type="radio" value="false"><span>False</span> 
+                    <input id="second-answer9" type="radio" value="true"><span>True</span>
+                </div>
+                <button onclick="confermaNonaRisposta()">Conferma</button>
+            </div>
+
+            <!-- DECIMA DOMANDA -->
+            <div id="container-ten">
+                <div class="questionBox">
+                    <h1 class="question">10- Which programming language shares its name with an island in Indonesia?</h1>
+                </div>
+
+                <div class="answerBox">
+                    <input id="first-answer10" type="radio" value="java"><span>Java</span> 
+                    <input id="second-answer10" type="radio" value="python"><span>Python</span>
+                    <input id="third-answer10" type="radio" value="c"><span>C</span>
+                    <input id="four-answer10" type="radio" value="jakarta"><span>Jakarta</span>
+                </div>
+                <button onclick="confermaDecimaRisposta()">Conferma</button>
+            </div>
+
+        </section>
+
+        <div id="final-score">
+            <b><span id="user-final-score"></span></b>
         </div>
 
-        <!-- SECONDA DOMANDA -->
-        <div id="container-two">
-            <div class="questionBox">
-                <h1 class="question">2- In the programming language Java, which of these keywords would you put on a variable to make sure it doesn't get modified?</h1>
-            </div>
-
-            <div class="answerBox">
-                <input id="first-answer2" type="radio" value="final"><span>Final</span> 
-                <input id="second-answer2" type="radio" value="private"><span>Private</span>
-                <input id="third-answer2" type="radio" value="static"><span>Static</span>
-                <input id="four-answer2" type="radio" value="public"><span>Public</span>
-            </div>
-            <button onclick="confermaSecondaRisposta()">Conferma</button>
-        </div>
-
-        <!-- TERZA DOMANDA -->
-        <div id="container-three">
-            <div class="questionBox">
-                <h1 class="question">3- The logo for Snapchat is a Bell.</h1>
-            </div>
-
-            <div class="answerBox">
-                <input id="first-answer3" type="radio" value="true"><span>True</span> 
-                <input id="second-answer3" type="radio" value="false"><span>False</span>
-            </div>
-            <button onclick="confermaTerzaRisposta()">Conferma</button>
-        </div>
-
-        <!-- QUARTA DOMANDA -->
-        <div id="container-four">
-            <div class="questionBox">
-                <h1 class="question">4- Pointers were not used in the original C programming language; they were added later on in C++.</h1>
-            </div>
-
-            <div class="answerBox">
-                <input id="first-answer4" type="radio" value="false"><span>False</span> 
-                <input id="second-answer4" type="radio" value="true"><span>True</span>
-            </div>
-            <button onclick="confermaQuartaRisposta()">Conferma</button>
-        </div>
-
-        <!-- QUINTA DOMANDA -->
-        <div id="container-five">
-            <div class="questionBox">
-                <h1 class="question">5- What is the most preferred image format used for logos in the Wikimedia database?</h1>
-            </div>
-
-            <div class="answerBox">
-                <input id="first-answer5" type="radio" value=".gif"><span>.gif</span> 
-                <input id="second-answer5" type="radio" value=".svg"><span>.svg</span>
-                <input id="third-answer5" type="radio" value=".png"><span>.png</span>
-                <input id="four-answer5" type="radio" value=".jpeg"><span>.jpeg</span>
-            </div>
-            <button onclick="confermaQuintaRisposta()">Conferma</button>
-        </div>
-        
-        <!-- SESTA DOMANDA -->
-        <div id="container-six">
-            <div class="questionBox">
-                <h1 class="question">6- In web design, what does CSS stand for?</h1>
-            </div>
-
-            <div class="answerBox">
-                <input id="first-answer6" type="radio" value="counter-strike:-source"><span>Counter Strike: Source</span> 
-                <input id="second-answer6" type="radio" value="corrective-style-sheet"><span>Corrective Style Sheet</span>
-                <input id="third-answer6" type="radio" value="cascading-style-sheet"><span>Cascading Style Sheet</span>
-                <input id="four-answer6" type="radio" value="computer-style-sheet"><span>Computer Style Sheet</span>
-            </div>
-            <button onclick="confermaSestaRisposta()">Conferma</button>
-        </div>
-
-        <!-- SETTIMA DOMANDA -->
-        <div id="container-seven">
-            <div class="questionBox">
-                <h1 class="question">7- What is the code name for the mobile operating system Android 7.0?</h1>
-            </div>
-
-            <div class="answerBox">
-                <input id="first-answer7" type="radio" value="ice-cream-sandwich"><span>Ice Cream Sandwich</span> 
-                <input id="second-answer7" type="radio" value="marshmallow"><span>Marshmallow</span>
-                <input id="third-answer7" type="radio" value="jelly-bean"><span>Jelly Bean</span>
-                <input id="four-answer7" type="radio" value="nougat"><span>Nougat</span>
-            </div>
-            <button onclick="confermaSettimaRisposta()">Conferma</button>
-        </div>
-
-        <!-- OTTAVA DOMANDA -->
-        <div id="container-eight">
-            <div class="questionBox">
-                <h1 class="question">8- On Twitter, what is the character limit for a Tweet?</h1>
-            </div>
-
-            <div class="answerBox">
-                <input id="first-answer8" type="radio" value=140><span>140</span> 
-                <input id="second-answer8" type="radio" value=120><span>120</span>
-                <input id="third-answer8" type="radio" value=160><span>160</span>
-                <input id="four-answer8" type="radio" value=100><span>100</span>
-            </div>
-            <button onclick="confermaOttavaRisposta()">Conferma</button>
-        </div>
-
-        <!-- NONA DOMANDA -->
-        <div id="container-nine">
-            <div class="questionBox">
-                <h1 class="question">9- Linux was first created as an alternative to Windows XP.</h1>
-            </div>
-
-            <div class="answerBox">
-                <input id="first-answer9" type="radio" value="false"><span>False</span> 
-                <input id="second-answer9" type="radio" value="true"><span>True</span>
-            </div>
-            <button onclick="confermaNonaRisposta()">Conferma</button>
-        </div>
-
-        <!-- DECIMA DOMANDA -->
-        <div id="container-ten">
-            <div class="questionBox">
-                <h1 class="question">10- Which programming language shares its name with an island in Indonesia?</h1>
-            </div>
-
-            <div class="answerBox">
-                <input id="first-answer10" type="radio" value="java"><span>Java</span> 
-                <input id="second-answer10" type="radio" value="python"><span>Python</span>
-                <input id="third-answer10" type="radio" value="c"><span>C</span>
-                <input id="four-answer10" type="radio" value="jakarta"><span>Jakarta</span>
-            </div>
-            <button onclick="confermaDecimaRisposta()">Conferma</button>
-        </div>
-
-    </section>
+    </main>
 
     
 <script src="main.js"></script>

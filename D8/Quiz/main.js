@@ -443,12 +443,19 @@ function confermaDecimaRisposta() {
   const removeAnswer = document.getElementById("container-ten");
   removeAnswer.style.display = "none";
 
-  alert("Hai finito le domande! \nVuoi scoprire il tuo punteggio?")
+  alert("Hai finito le domande! \nCome pensi sia andata?")
 
-  // AGGIUNGERE IL CODICE PER FARE USCIRE CONTENIORE DOVE MOSTRA IL PUNTEGGIO DELL'UTENTE E SE E' PROMOSSO! 
+  const quizBox = document.getElementById("quiz-box");
+  quizBox.style.display = "none"
+
+  if (userScore >= 6) {
+    alert("Sei stato Promosso!")
+  } else {
+    alert("Ritenta! Sarai piu fortunato...")
+  }
+
+  document.getElementById("final-score").style.display = "flex"
+  document.getElementById("user-final-score").innerHTML = "Punteggio Finale: " + userScore
 
 }
-
-
-//  - Al suo posto metti delle frasi di congratulazioni e dire se l'utente è promosso oppure no! (oltre a mostrare il suo punteggio!)
 
